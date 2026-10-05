@@ -1,0 +1,6 @@
+{
+  "name": "O.DO.HAENG - The Architectural Teahouse",
+  "description": "북촌 아키텍처럴 티 하우스 오도행(O.DO.HAENG). 정적 속에서 우려낸 한 모금의 사유, 단일 다원 계절 차와 다도 리추얼.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
