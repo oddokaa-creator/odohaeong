@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { SpatialHarmonySection } from './components/SpatialHarmonySection';
 import { SensoryArchiveSection } from './components/SensoryArchiveSection';
-import { ArchitecturalScenography } from './components/ArchitecturalScenography';
 import { HarvestMenuSection } from './components/HarvestMenuSection';
 import { DessertMenuSection } from './components/DessertMenuSection';
 import { AiTeaSommelierSection } from './components/AiTeaSommelierSection';
@@ -42,8 +41,6 @@ export default function App() {
         {/* Dessert Menu */}
         <DessertMenuSection />
 
-        {/* 4. Architectural Scenography (Raw Slate Teaware & Oak Bench) */}
-        <ArchitecturalScenography />
 
         {/* 5. Curated Harvests (Single-Origin Terroirs with Infusion Temperature Guide) */}
         <HarvestMenuSection />
