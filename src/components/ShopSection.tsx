@@ -60,8 +60,8 @@ const SHOP_CATALOG: ShopItem[] = [
     category: 'TEACUPS & OBJECTS',
     price: 35000,
     badge: '라이프스타일',
-    image: '/shop_incense_kit_1791268738976.jpg',
-    description: '죽심이 없는 순수 분말 압출 방식 인센스 스틱 40개와, 실제 현무암 원석을 수작업으로 가공한 1:1 핸드크래프트 홀더 세트입니다. 정적인 후각적 경험을 공간에 채워보세요.',
+    image: 'https://images.unsplash.com/photo-1605367352358-1f592182c1dc?auto=format&fit=crop&w=800&q=80',
+    description: '죽심이 없는 순수 분말 압출 방식 인센스 스틱 40개와, 매끄러운 오프화이트 무광 세라믹 인센스 플레이트 세트입니다. 공간을 맑고 깨끗하게 비워내는 명상적인 후각적 경험을 제안합니다.',
     inStock: true
   }
 ];
