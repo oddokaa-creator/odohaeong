@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { appStore } from '../store/appStore';
 import { ShopItem } from '../types';
 import { ShoppingBag, FileText, Check, ShieldCheck, BookOpen, Package, Send } from 'lucide-react';
@@ -66,12 +66,26 @@ const SHOP_CATALOG: ShopItem[] = [
   }
 ];
 
+const RITUAL_IMAGES = [
+  '/ritual_packaging_1.jpg',
+  '/ritual_packaging_2.jpg',
+  '/ritual_packaging_3.jpg',
+  '/ritual_packaging_4.jpg',
+];
 
 export const ShopSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'ALL' | 'GIFT SETS' | 'TEACUPS & OBJECTS' | 'SPECIAL'>('ALL');
   const [selectedPackaging, setSelectedPackaging] = useState<number>(0);
   const [messageCardOpen, setMessageCardOpen] = useState(false);
   const [customMessage, setCustomMessage] = useState('');
+  const [currentRitualImage, setCurrentRitualImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentRitualImage((prev) => (prev + 1) % RITUAL_IMAGES.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
 
   const filteredItems = activeTab === 'ALL'
     ? SHOP_CATALOG
@@ -330,11 +344,16 @@ export const ShopSection: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center py-12 border-t border-[#1F2625]/10">
         <div className="lg:col-span-5 relative">
           <div className="relative rounded-2xl overflow-hidden aspect-4/5 bg-[#E2E6E5] border border-[#1F2625]/10">
-            <img
-              src="https://images.unsplash.com/photo-1545048702-7936070012e7?auto=format&fit=crop&w=800&q=80"
-              alt="Ritual of Packaging"
-              className="w-full h-full object-cover object-center"
-            />
+            {RITUAL_IMAGES.map((imgSrc, idx) => (
+              <img
+                key={idx}
+                src={imgSrc}
+                alt={`Ritual of Packaging ${idx + 1}`}
+                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
+                  currentRitualImage === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                }`}
+              />
+            ))}
             <div className="absolute bottom-5 left-5 right-5 bg-[#1F2625]/85 backdrop-blur-md text-[#F2F4F3] p-4 rounded-xl text-xs border border-white/10">
               <span className="text-[10px] font-mono-tag tracking-widest text-[#C2A685] block mb-1 uppercase">
                 RITUAL OF PACKAGING
