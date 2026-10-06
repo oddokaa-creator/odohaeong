@@ -87,3 +87,45 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #3F5B4F;
 }
+
+/* ========================================================
+   PDF / Print Export Optimization
+   ======================================================== */
+@media print {
+  /* Force background colors and images to render in PDF */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Remove scrollbars and body height limits for print */
+  body, html {
+    overflow: visible !important;
+    height: auto !important;
+    background-color: #F2F4F3 !important;
+  }
+
+  /* Prevent page breaks inside critical elements */
+  section, div, img, h2, h3, p, ul, li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Make header non-fixed so it doesn't overlap on every page */
+  header, nav, .fixed, .sticky {
+    position: absolute !important;
+    top: 0 !important;
+  }
+
+  /* Hide UI components not relevant for portfolio PDFs */
+  button, .toast, .modal, #cart-drawer, [role="dialog"], [role="alert"] {
+    display: none !important;
+  }
+
+  /* Ensure main wrapper expands fully */
+  main {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
