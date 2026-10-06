@@ -4,65 +4,64 @@ import { ShopItem } from '../types';
 import { ShoppingBag, FileText, Check, ShieldCheck, BookOpen, Package, Send } from 'lucide-react';
 
 const FEATURED_SET: ShopItem = {
-  id: 'gift-signature-3terroirs',
-  name: '오도행 시그니처 싱글 오리진 3종 세트',
-  subtitle: 'SINGULAR TERROIR HERITAGE COLLECTION',
+  id: 'gift-signature-4-6-vip',
+  name: '시그니처 다과 오동나무 목합 세트 (VIP Gift)',
+  subtitle: 'PREMIUM ARTISANAL CONFECTIONERY GIFT',
   category: 'GIFT SETS',
-  price: 98000,
-  badge: 'SIGNATURE GIFT EDITION',
-  image: '/gift-set.jpg',
-  description: '다양한 발효도와 개성을 가진 싱글 오리진 잎차 3종(하동 야생 잭살차, 지리산 세작 녹차, 무이암차 육계)을 엄선하여, 취향에 따라 즐기기 좋은 밸런스 있는 구성을 제안합니다.',
+  price: 52000,
+  badge: 'VIP GIFT EDITION',
+  image: '/shop_featured_vip_gift_1791268692307.jpg',
+  description: '매장에서 직접 제조하는 다과 중 보관성이 검증된 큐브 팥양갱, 흑임자 다크 브라우니, 호두 곶감말이, 쑥 글라세 마들렌 등을 엄선하여 오동나무 합판 슬라이딩 박스와 먹색 린넨 보자기로 정성껏 포장했습니다.',
   packagingOptions: [
-    { name: '딥 포레스트 그린 지함 (무광 & 은은한 엠보싱)', priceAdd: 0 },
-    { name: '웜 그레이 패키지 (무광 & 동박 로고 포인트)', priceAdd: 0 },
-    { name: '크림 베이지 패키지 (무광 & 금박 로고 포인트)', priceAdd: 0 }
+    { name: '시그니처 다과 4구 세트', priceAdd: -14000 },
+    { name: '시그니처 다과 6구 세트 (마들렌 추가)', priceAdd: 0 }
   ],
   inStock: true
 };
 
 const SHOP_CATALOG: ShopItem[] = [
   {
-    id: 'product-hadong-jacksal',
-    name: '하동 야생 잭살차',
-    subtitle: 'WILD BLACK TEA',
+    id: 'product-tea-tins',
+    name: '매트 블랙 틴케이스 잎차',
+    subtitle: 'SINGLE ORIGIN & BLEND',
     category: 'SPECIAL',
+    price: 38000,
+    badge: '티 컬렉션',
+    image: '/shop_tea_tin_cans_1791268703937.jpg',
+    description: '집에서도 티하우스의 수색과 향을 구현할 수 있는 잎차 라인입니다. 이중 밀폐 캡과 무광 엠보싱 타이포그래피가 돋보이는 모던한 틴캔에 담겨 있습니다. (대홍포, 백호은침 등 선택)',
+    inStock: true
+  },
+  {
+    id: 'product-pyramid-teabags',
+    name: '피라미드 생분해 티백 어소트 (8개입)',
+    subtitle: 'BOUTIQUE BOX ASSORTMENT',
+    category: 'GIFT SETS',
+    price: 22000,
+    badge: '선물용 차 세트',
+    image: '/shop_teabag_box_1791268714520.jpg',
+    description: '옥수수 전분 유래 PLA 생분해 삼각 티백. 회백색 한지 지함 박스에 호지차, 백차, 루이보스, 대홍포가 각각 2입씩 알루미늄 포일 파우치로 개별 포장되어 있습니다.',
+    inStock: true
+  },
+  {
+    id: 'product-teaware-craft',
+    name: '시그니처 흙 질감 찻잔 세트',
+    subtitle: 'ARTISANAL TEAWARE SET',
+    category: 'TEACUPS & OBJECTS',
+    price: 48000,
+    badge: '공예 찻잔',
+    image: '/shop_teaware_craft_1791268726651.jpg',
+    description: '백자토와 철분 점토를 섞어 빚어낸 무광 분청 찻잔(2인 조)입니다. 겉면은 회벽처럼 까슬한 질감을, 내면은 투명 매트유를 시유하여 아름다운 탕색을 온전히 관찰할 수 있습니다.',
+    inStock: true
+  },
+  {
+    id: 'product-zen-incense',
+    name: '젠 인센스 스틱 & 자연석 홀더 키트',
+    subtitle: 'SCENT & RITUAL OBJECT',
+    category: 'TEACUPS & OBJECTS',
     price: 35000,
-    badge: '홍차 계열',
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80',
-    description: '자연 발효를 거쳐 깊고 묵직한 붉은 호박빛을 띠며, 은은한 단맛과 부드러운 목 넘김이 좋아 대중적이면서도 고급스러운 매력을 줍니다.',
-    inStock: true
-  },
-  {
-    id: 'product-jirisan-sejak',
-    name: '지리산 세작 녹차',
-    subtitle: 'GREEN TEA',
-    category: 'SPECIAL',
-    price: 32000,
-    badge: '녹차 계열',
-    image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=800&q=80',
-    description: '봄철 여린 잎을 덖어내어 맑고 청량한 연둣빛 수색과 싱그러운 풀 내음을 선사합니다. 차 세트의 기본이자 산뜻한 중심을 잡아줍니다.',
-    inStock: true
-  },
-  {
-    id: 'product-wuyi-rougui',
-    name: '무이암차 육계',
-    subtitle: 'WUYI ROCK TEA',
-    category: 'SPECIAL',
-    price: 45000,
-    badge: '우롱/암차 계열',
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
-    description: '바위산의 미네랄 감과 훈연향, 강한 배전에서 오는 깊은 오렌지 브라운빛이 특징입니다. 차를 깊이 있게 즐기는 마니아층까지 만족시킬 수 있는 시그니처 포인트입니다.',
-    inStock: true
-  },
-  {
-    id: 'product-silver-needle',
-    name: '백호은침 (대체 구성)',
-    subtitle: 'SILVER NEEDLE WHITE TEA',
-    category: 'SPECIAL',
-    price: 42000,
-    badge: '백차 계열',
-    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80',
-    description: '맑고 투명한 백포도주빛의 백호은침. 선호에 따라 잭살차나 육계 대신 맑고 은은한 풍미로 대체 구성할 수 있습니다.',
+    badge: '라이프스타일',
+    image: '/shop_incense_kit_1791268738976.jpg',
+    description: '죽심이 없는 순수 분말 압출 방식 인센스 스틱 40개와, 실제 현무암 원석을 수작업으로 가공한 1:1 핸드크래프트 홀더 세트입니다. 정적인 후각적 경험을 공간에 채워보세요.',
     inStock: true
   }
 ];
