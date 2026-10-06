@@ -14,7 +14,7 @@ export const HeroSection: React.FC = () => {
         {/* Background Image: Bukchon teahouse interior with counter, ceramic kettle & warm light */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1545048702-7936070012e7?auto=format&fit=crop&w=1800&q=85"
+            src="/hero_teahouse_interior.jpg"
             alt="O.DO.HAENG Teahouse Counter & Master"
             className="w-full h-full object-cover object-center scale-102 transition-transform duration-1000 ease-out"
           />
