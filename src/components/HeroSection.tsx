@@ -3,7 +3,8 @@ import { ArrowRight } from 'lucide-react';
 
 const IMAGES = [
   '/hero_teahouse_interior.jpg',
-  '/hero_teahouse_archive.jpg'
+  '/hero_teahouse_archive.jpg',
+  '/hero_teahouse_lounge.jpg'
 ];
 
 export const HeroSection: React.FC = () => {
