@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { db } from '../firebase';
-import { collection, query, orderBy, onSnapshot, addDoc, serverTimestamp, deleteDoc, doc, updateDoc } from 'firebase/auth'; // Wait, it's from firebase/firestore
+import { collection, query, orderBy, onSnapshot, addDoc, serverTimestamp, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import * as firestore from 'firebase/firestore';
 import { LogIn, LogOut, Plus, Trash2, Edit2, Check, X } from 'lucide-react';
 import { useAppStore } from '../store/useAppStore';

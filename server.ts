@@ -333,7 +333,10 @@ async function startServer() {
         }
       });
 
-      const base64Image = response.generatedImages[0].image.imageBytes;
+      const base64Image = response.generatedImages?.[0]?.image?.imageBytes;
+      if (!base64Image) {
+        throw new Error('Image generation failed or returned no image');
+      }
 
       return res.json({ success: true, image: `data:image/jpeg;base64,${base64Image}` });
     } catch (err: any) {

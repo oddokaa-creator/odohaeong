@@ -1,6 +1,6 @@
 export interface SpaceInquiry {
   id?: string;
-  type: 'reservation' | 'vip_gifting' | 'space_design';
+  type: 'reservation' | 'vip_gifting' | 'space_design' | 'collab';
   name: string;
   contact: string;
   email?: string;
