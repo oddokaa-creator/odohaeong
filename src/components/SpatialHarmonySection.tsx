@@ -36,13 +36,13 @@ export const SpatialHarmonySection: React.FC = () => {
         <div className="lg:col-span-6">
           <div className="relative rounded-2xl overflow-hidden border border-[#1F2625]/10 shadow-sm bg-[#E2E6E5]">
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
-              alt="Grey-White Plaster & Contemporary Zen Design"
-              className="w-full h-[420px] sm:h-[480px] object-cover object-center grayscale-[0.2]"
+              src="/brand_story_exterior.jpg"
+              alt="O.DO.HAENG Exterior Facade"
+              className="w-full h-[420px] sm:h-[480px] object-cover object-center grayscale-[0.1]"
             />
             {/* Tag in bottom-right corner */}
             <div className="absolute bottom-5 right-5 bg-[#1F2625]/85 backdrop-blur-md text-[#F2F4F3] px-3.5 py-1.5 rounded-full text-[10px] font-mono-tag tracking-widest uppercase border border-white/10">
-              GREY-WHITE PLASTER & DARK WALNUT
+              MODERN ZEN PAVILION EXTERIOR
             </div>
           </div>
         </div>
