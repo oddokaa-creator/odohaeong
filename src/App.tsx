@@ -14,7 +14,6 @@ import { CartDrawer } from './components/CartDrawer';
 import { ExportHtmlModal } from './components/ExportHtmlModal';
 import { ToastContainer } from './components/ToastContainer';
 import { AiDesignGenerator } from './components/AiDesignGenerator';
-import { AdminDashboard } from './components/AdminDashboard';
 
 export default function App() {
   const isDarkMode = useAppStore(state => state.isDarkMode);
@@ -53,9 +52,6 @@ export default function App() {
         {/* 8. Intimate Teahouse Reservation & VIP Gifting (#inquiry-form) */}
         <ReservationInquirySection />
         
-        {/* 9. Personal Archive (Admin Dashboard) */}
-        <AdminDashboard />
-
         {/* 10. AI Design Studio */}
         <AiDesignGenerator />
       </main>
