@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenExportModal }) => {
               브랜드 스토리
             </button>
             <button
-              onClick={() => scrollTo('creations')}
+              onClick={() => scrollTo('menu')}
               className="hover:text-[#3F5B4F] transition-colors py-2"
             >
               메뉴
@@ -156,7 +156,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenExportModal }) => {
                 브랜드 스토리
               </button>
               <button
-                onClick={() => scrollTo('creations')}
+                onClick={() => scrollTo('menu')}
                 className="text-left py-2 border-b border-black/5"
               >
                 메뉴

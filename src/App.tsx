@@ -35,15 +35,14 @@ export default function App() {
         {/* 2. Spatial Harmony (Bukchon Sanctuary Philosophy & 4 Metrics) */}
         <SpatialHarmonySection />
 
+        {/* 5. Curated Harvests (Single-Origin Terroirs with Infusion Temperature Guide) */}
+        <HarvestMenuSection />
+
         {/* 3. Sensory Archive (3 Botanical Cold Brew Creations: NO. 01 - 03) */}
         <SensoryArchiveSection />
         
         {/* Dessert Menu */}
         <DessertMenuSection />
-
-
-        {/* 5. Curated Harvests (Single-Origin Terroirs with Infusion Temperature Guide) */}
-        <HarvestMenuSection />
 
         {/* 6. AI Tea Sommelier (입맛 및 기분 맞춤 티 큐레이션) */}
         <AiTeaSommelierSection />
