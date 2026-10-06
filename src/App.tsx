@@ -6,6 +6,7 @@ import { SpatialHarmonySection } from './components/SpatialHarmonySection';
 import { SensoryArchiveSection } from './components/SensoryArchiveSection';
 import { ArchitecturalScenography } from './components/ArchitecturalScenography';
 import { HarvestMenuSection } from './components/HarvestMenuSection';
+import { DessertMenuSection } from './components/DessertMenuSection';
 import { AiTeaSommelierSection } from './components/AiTeaSommelierSection';
 import { ShopSection } from './components/ShopSection';
 import { ReservationInquirySection } from './components/ReservationInquirySection';
@@ -37,6 +38,9 @@ export default function App() {
 
         {/* 3. Sensory Archive (3 Botanical Cold Brew Creations: NO. 01 - 03) */}
         <SensoryArchiveSection />
+        
+        {/* Dessert Menu */}
+        <DessertMenuSection />
 
         {/* 4. Architectural Scenography (Raw Slate Teaware & Oak Bench) */}
         <ArchitecturalScenography />
