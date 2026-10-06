@@ -30,56 +30,6 @@ export const SpatialHarmonySection: React.FC = () => {
             </p>
           </div>
 
-          {/* 4 Architectural Metrics */}
-          <div className="grid grid-cols-2 gap-y-10 gap-x-6 pt-4 border-t border-[#1F2625]/10">
-            <div>
-              <div className="text-3xl sm:text-4xl font-light text-[#1F2625] font-display tracking-tight mb-1">
-                100<span className="text-xl">py</span>
-              </div>
-              <div className="text-[10px] font-mono-tag tracking-wider uppercase text-[#1F2625] font-medium">
-                SPATIAL EXPANSION
-              </div>
-              <div className="text-xs text-[#6B7775] mt-1 font-light">
-                압도적 개방감의 회벽 라운지
-              </div>
-            </div>
-
-            <div>
-              <div className="text-3xl sm:text-4xl font-light text-[#1F2625] font-display tracking-tight mb-1">
-                2.0<span className="text-xl">m</span>
-              </div>
-              <div className="text-[10px] font-mono-tag tracking-wider uppercase text-[#1F2625] font-medium">
-                PRIVACY DISTANCE
-              </div>
-              <div className="text-xs text-[#6B7775] mt-1 font-light">
-                여유로운 테이블 간격
-              </div>
-            </div>
-
-            <div>
-              <div className="text-3xl sm:text-4xl font-light text-[#1F2625] font-display tracking-tight mb-1">
-                100<span className="text-xl">%</span>
-              </div>
-              <div className="text-[10px] font-mono-tag tracking-wider uppercase text-[#1F2625] font-medium">
-                MODERN SEATING
-              </div>
-              <div className="text-xs text-[#6B7775] mt-1 font-light">
-                전 좌석 입식 라운지 & 오마카세 바
-              </div>
-            </div>
-
-            <div>
-              <div className="text-3xl sm:text-4xl font-light text-[#1F2625] font-display tracking-tight mb-1">
-                2700<span className="text-xl">K</span>
-              </div>
-              <div className="text-[10px] font-mono-tag tracking-wider uppercase text-[#1F2625] font-medium">
-                GLARELESS ILLUMINATION
-              </div>
-              <div className="text-xs text-[#6B7775] mt-1 font-light">
-                시선을 온화하게 품는 간접 조명
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Right Column: Architectural Image Frame */}
