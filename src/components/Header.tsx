@@ -57,49 +57,37 @@ export const Header: React.FC<HeaderProps> = ({ onOpenExportModal }) => {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-9 text-[11px] font-mono-tag tracking-[0.18em] uppercase text-[#1F2625]/85">
-            <button
-              onClick={() => scrollTo('creations')}
-              className="hover:text-[#3F5B4F] transition-colors py-2"
-            >
-              CREATIONS
-            </button>
+          <nav className="hidden lg:flex items-center gap-9 text-[12px] font-medium tracking-[0.05em] text-[#1F2625]/85">
             <button
               onClick={() => scrollTo('space')}
               className="hover:text-[#3F5B4F] transition-colors py-2"
             >
-              SPACE
+              브랜드 스토리
             </button>
             <button
-              onClick={() => scrollTo('menu')}
+              onClick={() => scrollTo('creations')}
               className="hover:text-[#3F5B4F] transition-colors py-2"
             >
-              MENU
+              메뉴
             </button>
             <button
               onClick={() => scrollTo('sommelier')}
               className="hover:text-[#3F5B4F] transition-colors py-2 text-[#3F5B4F] font-semibold flex items-center gap-1.5"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#3F5B4F]" />
-              <span>AI SOMMELIER</span>
+              <span>AI 소믈리에</span>
             </button>
             <button
               onClick={() => scrollTo('shop')}
               className="hover:text-[#3F5B4F] transition-colors py-2 text-[#715A3E] font-medium"
             >
-              SHOP
+              기프트샵
             </button>
             <button
               onClick={() => scrollTo('reserve')}
               className="hover:text-[#3F5B4F] transition-colors py-2"
             >
-              RESERVE
-            </button>
-            <button
-              onClick={() => scrollTo('visit')}
-              className="hover:text-[#3F5B4F] transition-colors py-2"
-            >
-              VISIT
+              예약
             </button>
           </nav>
 
@@ -160,49 +148,37 @@ export const Header: React.FC<HeaderProps> = ({ onOpenExportModal }) => {
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-[#F2F4F3] border-b border-[#1F2625]/10 px-6 py-6 space-y-4">
-            <div className="grid grid-cols-2 gap-3 text-xs font-mono-tag tracking-wider uppercase text-[#1F2625]">
-              <button
-                onClick={() => scrollTo('creations')}
-                className="text-left py-2 border-b border-black/5"
-              >
-                01 CREATIONS
-              </button>
+            <div className="grid grid-cols-2 gap-3 text-[13px] font-medium tracking-wider text-[#1F2625]">
               <button
                 onClick={() => scrollTo('space')}
                 className="text-left py-2 border-b border-black/5"
               >
-                02 SPACE
+                브랜드 스토리
               </button>
               <button
-                onClick={() => scrollTo('menu')}
+                onClick={() => scrollTo('creations')}
                 className="text-left py-2 border-b border-black/5"
               >
-                03 MENU
+                메뉴
               </button>
               <button
                 onClick={() => scrollTo('sommelier')}
-                className="text-left py-2 border-b border-black/5 text-[#3F5B4F] font-semibold flex items-center gap-1.5"
+                className="text-left py-2 border-b border-black/5 text-[#3F5B4F] font-semibold flex items-center gap-1.5 col-span-2 sm:col-span-1"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#3F5B4F]" />
-                <span>04 AI 입맛 추천</span>
+                <span>AI 소믈리에</span>
               </button>
               <button
                 onClick={() => scrollTo('shop')}
                 className="text-left py-2 border-b border-black/5 text-[#715A3E] font-medium"
               >
-                05 SHOP &amp; GIFTS
+                기프트샵
               </button>
               <button
                 onClick={() => scrollTo('reserve')}
-                className="text-left py-2 border-b border-black/5"
+                className="text-left py-2 border-b border-black/5 col-span-2 sm:col-span-1"
               >
-                06 RESERVE
-              </button>
-              <button
-                onClick={() => scrollTo('visit')}
-                className="text-left py-2 border-b border-black/5"
-              >
-                07 VISIT
+                예약
               </button>
             </div>
             <button
