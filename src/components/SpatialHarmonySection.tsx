@@ -8,17 +8,27 @@ export const SpatialHarmonySection: React.FC = () => {
         <div className="lg:col-span-6 space-y-8">
           <div>
             <span className="text-[11px] font-mono-tag tracking-[0.22em] uppercase text-[#715A3E] block mb-3">
-              BRAND STORY · STRATA OF SERENITY
+              BRAND STORY · 吾道行
             </span>
             <h2 className="text-2xl sm:text-4xl font-light text-[#1F2625] leading-snug sm:leading-[1.3] font-heading">
-              단정하게 쌓아 올린 <span className="underline decoration-[#715A3E]/40 decoration-1 underline-offset-8">고요의 지층</span> 위에서,<br />
-              당신만의 차가운 여백을 마주합니다.
+              <span className="underline decoration-[#715A3E]/40 decoration-1 underline-offset-8">
+                스스로를 마주하는
+              </span><br />
+              차의 여정
             </h2>
           </div>
 
-          <p className="text-sm sm:text-base text-[#6B7775] leading-relaxed font-light">
-            오도행(O.DO.HAENG)은 불필요한 자극을 덜어내고 여백의 팽창감을 선사하는 100평 규모의 모던 미니멀 티 라운지입니다. 무광의 그레이화이트 회벽과 먹색 괴석, 그리고 다크 월넛의 강렬한 대비가 만들어내는 '컨템포러리 젠(Contemporary Zen)'의 정수를 경험해 보세요. 전통 좌식이나 다다미를 배제하고, 넓은 간격의 100% 모던 입식 좌석을 통해 가장 쾌적하고 우아한 프라이버시를 제공합니다.
-          </p>
+          <div className="space-y-4 text-sm sm:text-base text-[#6B7775] leading-relaxed font-light">
+            <p>
+              우리는 저마다 다른 보폭으로 하루를 살아갑니다. 쉼 없이 흘러가는 시간과 복잡한 세상 속에서 때로는 나 자신의 호흡조차 잊은 채 걷곤 합니다. <strong>‘오도행(吾道行)’</strong>은 밖으로 향하던 시선을 거두어 비로소 스스로의 내면을 향하게 하는 공간입니다.
+            </p>
+            <p>
+              차 한 잔을 마시는 시간은 단순한 목마름을 달래는 음용을 넘어섭니다. 찻잎이 물을 만나 천천히 피어나듯, 바쁜 일상에서 벗어나 흩어졌던 마음을 모으고 나만의 호흡을 되찾는 시간. 그것은 차와 함께 떠나는 작지만 온전한 일상의 여정입니다.
+            </p>
+            <p>
+              수백 년 동안 깊은 땅의 기운을 머금은 정통 찻잎의 깊이부터, 오늘의 감각을 맑게 깨우는 다채로운 차의 변주까지. 잠시 속도를 늦추고 잔을 마주해 보세요. 찻잔 속에 담긴 맑은 고요 속에서, 당신만의 길을 다시 발견하게 될 것입니다.
+            </p>
+          </div>
 
           {/* 4 Architectural Metrics */}
           <div className="grid grid-cols-2 gap-y-10 gap-x-6 pt-4 border-t border-[#1F2625]/10">
