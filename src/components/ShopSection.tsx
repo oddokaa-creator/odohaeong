@@ -10,7 +10,7 @@ const FEATURED_SET: ShopItem = {
   category: 'GIFT SETS',
   price: 52000,
   badge: 'VIP GIFT EDITION',
-  image: '/shop_featured_vip_gift_1791268692307.jpg',
+  image: '/shop_featured_vip_gift_new.jpg',
   description: '매장에서 직접 제조하는 다과 중 보관성이 검증된 큐브 팥양갱, 흑임자 다크 브라우니, 호두 곶감말이, 쑥 글라세 마들렌 등을 엄선하여 오동나무 합판 슬라이딩 박스와 먹색 린넨 보자기로 정성껏 포장했습니다.',
   packagingOptions: [
     { name: '시그니처 다과 4구 세트', priceAdd: -14000 },
