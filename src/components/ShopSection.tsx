@@ -49,7 +49,7 @@ const SHOP_CATALOG: ShopItem[] = [
     category: 'TEACUPS & OBJECTS',
     price: 48000,
     badge: '공예 찻잔',
-    image: 'https://images.unsplash.com/photo-1574883447954-20b1713333da?auto=format&fit=crop&w=800&q=80',
+    image: '/shop_teaware_craft_white.jpg',
     description: '백자토와 철분 점토를 섞어 빚어낸 무광 분청 찻잔(2인 조)입니다. 겉면은 회벽처럼 까슬한 질감을, 내면은 투명 매트유를 시유하여 아름다운 탕색을 온전히 관찰할 수 있습니다.',
     inStock: true
   },
@@ -60,7 +60,7 @@ const SHOP_CATALOG: ShopItem[] = [
     category: 'TEACUPS & OBJECTS',
     price: 35000,
     badge: '라이프스타일',
-    image: 'https://images.unsplash.com/photo-1605367352358-1f592182c1dc?auto=format&fit=crop&w=800&q=80',
+    image: '/shop_incense_kit_white.jpg',
     description: '죽심이 없는 순수 분말 압출 방식 인센스 스틱 40개와, 매끄러운 오프화이트 무광 세라믹 인센스 플레이트 세트입니다. 공간을 맑고 깨끗하게 비워내는 명상적인 후각적 경험을 제안합니다.',
     inStock: true
   }
