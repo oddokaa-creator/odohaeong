@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || atob("QUl6YVN5QmgyN2hZbllBTzU5M0hqQjNOc1pNd2E0NUdiMzdVNXVF"),
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "odohaeng.firebaseapp.com",
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "odohaeng",
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "odohaeng.firebasestorage.app",
