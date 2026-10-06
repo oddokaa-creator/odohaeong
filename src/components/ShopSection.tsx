@@ -38,7 +38,7 @@ const SHOP_CATALOG: ShopItem[] = [
     category: 'GIFT SETS',
     price: 22000,
     badge: '선물용 차 세트',
-    image: '/shop_teabag_box_1791268714520.jpg',
+    image: '/shop_teabag_box_white.jpg',
     description: '옥수수 전분 유래 PLA 생분해 삼각 티백. 회백색 한지 지함 박스에 호지차, 백차, 루이보스, 대홍포가 각각 2입씩 알루미늄 포일 파우치로 개별 포장되어 있습니다.',
     inStock: true
   },
