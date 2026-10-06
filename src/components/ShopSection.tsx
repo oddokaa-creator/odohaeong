@@ -22,12 +22,12 @@ const FEATURED_SET: ShopItem = {
 const SHOP_CATALOG: ShopItem[] = [
   {
     id: 'product-tea-tins',
-    name: '매트 블랙 틴케이스 잎차',
+    name: '매트 오프화이트 틴케이스 잎차',
     subtitle: 'SINGLE ORIGIN & BLEND',
     category: 'SPECIAL',
     price: 38000,
     badge: '티 컬렉션',
-    image: '/shop_tea_tin_cans_1791268703937.jpg',
+    image: '/shop_tea_tin_cans_white.jpg',
     description: '집에서도 티하우스의 수색과 향을 구현할 수 있는 잎차 라인입니다. 이중 밀폐 캡과 무광 엠보싱 타이포그래피가 돋보이는 모던한 틴캔에 담겨 있습니다. (대홍포, 백호은침 등 선택)',
     inStock: true
   },
