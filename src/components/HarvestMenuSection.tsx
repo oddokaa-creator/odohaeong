@@ -5,7 +5,7 @@ const TEA_HARVESTS = [
   {
     id: 'tea-1',
     name: '하동 옥로 우전',
-    en: 'HADONG UJEON 2024',
+    en: 'HADONG UJEON',
     terroir: '경남 하동 화개면 / 은은한 난초향과 첫물차의 달콤한 감칠맛',
     temp: '80°C',
     steepCount: '3 Infusions',
@@ -15,17 +15,6 @@ const TEA_HARVESTS = [
   },
   {
     id: 'tea-2',
-    name: '무이암차 육계',
-    en: 'WUYI ROUGUI CLIFF TERROIR',
-    terroir: '중국 복건성 무이산 / 붉은 바위의 미네랄과 시나몬의 깊은 여운',
-    temp: '95°C',
-    steepCount: '5 Infusions',
-    duration: '45s',
-    price: '18,000',
-    notes: ['바위 미네랄', '시나몬 로스트', '묵직한 바디감']
-  },
-  {
-    id: 'tea-3',
     name: '백호은침 춘채',
     en: 'SILVER NEEDLE SPRING BUD',
     terroir: '복건성 정화현 해발 800m / 백련꽃 향과 어린 싹의 맑은 꿀맛',
@@ -36,15 +25,15 @@ const TEA_HARVESTS = [
     notes: ['청초한 백합', '은빛 솜털', '감미로운 여운']
   },
   {
-    id: 'tea-4',
-    name: '우지 싱글 에스테이트 말차',
-    en: 'UJI SAMIDORI CULTIVAR',
-    terroir: '교토 우지시 단일 수령 / 짙은 벨벳 질감과 고소한 우마미, 계절 화과자 페어링',
-    temp: '75°C',
-    steepCount: 'Ceremonial Whisk',
-    duration: '격불 60s',
-    price: '17,000',
-    notes: ['단일 차나무 품종', '수제 차선 격불', '농후한 벨벳 질감']
+    id: 'tea-3',
+    name: '보이차',
+    en: 'PUERH TEA',
+    terroir: '중국 운남성 / 세월이 빚어낸 깊고 부드러운 단맛과 우디한 풍미',
+    temp: '95°C',
+    steepCount: '5 Infusions',
+    duration: '45s',
+    price: '18,000',
+    notes: ['부드러운 단맛', '우디함', '묵직한 바디감']
   }
 ];
 
@@ -53,7 +42,7 @@ export const HarvestMenuSection: React.FC = () => {
 
   return (
     <section id="menu" className="w-full max-w-[1440px] mx-auto px-6 sm:px-12 py-16 sm:py-24 border-b border-[#1F2625]/10">
-      <div className="max-w-4xl mx-auto text-center mb-16">
+      <div className="max-w-4xl mx-auto text-center mb-12">
         <span className="text-[11px] font-mono-tag tracking-[0.22em] uppercase text-[#715A3E] block mb-2">
           CURATED HARVESTS
         </span>
@@ -63,6 +52,31 @@ export const HarvestMenuSection: React.FC = () => {
         <p className="text-xs sm:text-sm text-[#6B7775] font-light max-w-xl mx-auto leading-relaxed">
           엄선된 단일 수령 품종과 정밀 브루잉 가이드로 완성되는 온전한 다도 리추얼
         </p>
+      </div>
+
+      {/* Serving Style Info */}
+      <div className="max-w-4xl mx-auto mb-16 bg-[#F9FAFA] border border-[#1F2625]/5 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8 justify-between">
+        <div className="flex-1 text-center md:text-left">
+          <h3 className="text-lg font-heading text-[#1F2625] mb-3">TEA SERVING GUIDE</h3>
+          <p className="text-sm text-[#6B7775] font-light leading-relaxed">
+            모든 단일 다원 차 메뉴는 <span className="font-medium text-[#1F2625]">HOT</span> 또는 <span className="font-medium text-[#1F2625]">ICE</span>로 주문 가능합니다.<br className="hidden md:block" />
+            온도에 따라 차의 풍미를 온전히 즐기실 수 있도록, 각기 다른 전용 다기 세트로 정성스럽게 제공됩니다.
+          </p>
+        </div>
+        <div className="flex gap-4 sm:gap-6">
+          <div className="flex flex-col items-center gap-3">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border border-[#1F2625]/10 shadow-sm relative group">
+              <img src="/hot.jpg" alt="Hot Tea Serving" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            <span className="text-[11px] font-mono-tag tracking-wider text-[#715A3E] bg-[#715A3E]/10 px-2.5 py-1 rounded-full">HOT SERVING</span>
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border border-[#1F2625]/10 shadow-sm relative group">
+              <img src="/ice.jpg" alt="Ice Tea Serving" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            <span className="text-[11px] font-mono-tag tracking-wider text-[#715A3E] bg-[#715A3E]/10 px-2.5 py-1 rounded-full">ICE SERVING</span>
+          </div>
+        </div>
       </div>
 
       {/* Tea Menu List matching Image 1 layout */}
@@ -92,7 +106,11 @@ export const HarvestMenuSection: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-6 self-end md:self-auto shrink-0 pt-2 md:pt-0">
+                <div className="flex items-center gap-4 self-end md:self-auto shrink-0 pt-2 md:pt-0">
+                  <div className="flex items-center gap-1.5 mr-2">
+                    <span className="text-[10px] font-mono-tag bg-[#1F2625] text-white px-1.5 py-0.5 rounded-sm">HOT</span>
+                    <span className="text-[10px] font-mono-tag bg-[#E2E6E5] text-[#1F2625] px-1.5 py-0.5 rounded-sm">ICE</span>
+                  </div>
                   <span className="text-[11px] font-mono-tag text-[#6B7775] tracking-wider flex items-center gap-1 bg-[#E2E6E5]/70 px-2.5 py-1 rounded">
                     <Thermometer className="w-3 h-3 text-[#3F5B4F]" />
                     {tea.temp} · {tea.steepCount}

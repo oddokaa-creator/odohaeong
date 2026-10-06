@@ -301,6 +301,50 @@ async function startServer() {
     }
   });
 
+  // AI Image Generation Endpoint (Imagen 3)
+  app.post('/api/gemini/generate-image', async (req, res) => {
+    try {
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey || apiKey === 'MY_GEMINI_API_KEY') {
+        return res.status(400).json({ error: 'API key is missing' });
+      }
+
+      const { prompt } = req.body;
+      if (!prompt) {
+        return res.status(400).json({ error: 'Prompt is required' });
+      }
+
+      const ai = new GoogleGenAI({
+        apiKey,
+        httpOptions: {
+          headers: {
+            'User-Agent': 'aistudio-build',
+          }
+        }
+      });
+
+      const response = await ai.models.generateImages({
+        model: 'imagen-3.0-generate-001',
+        prompt: prompt,
+        config: {
+          numberOfImages: 1,
+          outputMimeType: 'image/jpeg',
+          aspectRatio: '1:1',
+        }
+      });
+
+      const base64Image = response.generatedImages[0].image.imageBytes;
+
+      return res.json({ success: true, image: `data:image/jpeg;base64,${base64Image}` });
+    } catch (err: any) {
+      console.error('Image generation error:', err);
+      return res.status(500).json({
+        error: 'GENERATION_ERROR',
+        message: err?.message || '이미지 생성 중 오류가 발생했습니다.'
+      });
+    }
+  });
+
   // Health endpoint
   app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', service: 'O.DO.HAENG Teahouse' });

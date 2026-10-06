@@ -5,7 +5,7 @@ import { SpaceInquiry } from '../types';
 import { CheckCircle2, Clock, Calendar, Users, Gift, Send } from 'lucide-react';
 
 export const ReservationInquirySection: React.FC = () => {
-  const [formType, setFormType] = useState<'reservation' | 'vip_gifting'>('reservation');
+  const [formType, setFormType] = useState<'reservation' | 'vip_gifting' | 'collab'>('reservation');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -17,6 +17,7 @@ export const ReservationInquirySection: React.FC = () => {
   const [guests, setGuests] = useState('2인');
   const [giftQuantity, setGiftQuantity] = useState('10세트 ~ 30세트');
   const [preference, setPreference] = useState('');
+  const [companyName, setCompanyName] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,7 +36,7 @@ export const ReservationInquirySection: React.FC = () => {
       date: formType === 'reservation' ? date : undefined,
       sessionTime: formType === 'reservation' ? sessionTime : undefined,
       guests: formType === 'reservation' ? guests : undefined,
-      spaceType: formType === 'vip_gifting' ? `기프트 수량: ${giftQuantity}` : undefined,
+      spaceType: formType === 'vip_gifting' ? `기프트 수량: ${giftQuantity}` : formType === 'collab' ? `소속/브랜드: ${companyName}` : undefined,
       preference,
       message: preference,
       createdAt: Date.now()
@@ -47,10 +48,10 @@ export const ReservationInquirySection: React.FC = () => {
       setIsSubmitted(true);
       appStore.addToast(
         'success',
-        formType === 'reservation' ? '다석 예약 신청 완료' : 'VIP 기프트 상담 신청 완료',
+        formType === 'reservation' ? '다석 예약 신청 완료' : formType === 'vip_gifting' ? 'VIP 기프트 상담 신청 완료' : '콜라보 제안 신청 완료',
         res.isFallback
           ? '신청서가 안전하게 접수되었습니다. 전담 매니저가 연락드립니다.'
-          : 'space_inquiries 컬렉션에 실시간 등록되었습니다.'
+          : '성공적으로 전송되었습니다.'
       );
 
       // Reset form after short delay
@@ -58,6 +59,7 @@ export const ReservationInquirySection: React.FC = () => {
         setName('');
         setContact('');
         setPreference('');
+        setCompanyName('');
         setIsSubmitted(false);
       }, 5000);
 
@@ -135,8 +137,23 @@ export const ReservationInquirySection: React.FC = () => {
                   : 'text-[#6B7775] hover:text-[#1F2625]'
               }`}
             >
-              VIP &amp; 대량 선물 상담 (GIFT INQUIRY)
+              VIP 선물 상담 (GIFT INQUIRY)
               {formType === 'vip_gifting' && (
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3F5B4F]"></span>
+              )}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setFormType('collab')}
+              className={`pb-3 px-4 text-xs font-mono-tag tracking-wider uppercase transition-colors relative ${
+                formType === 'collab'
+                  ? 'text-[#3F5B4F] font-semibold'
+                  : 'text-[#6B7775] hover:text-[#1F2625]'
+              }`}
+            >
+              콜라보 제안 (COLLAB INQUIRY)
+              {formType === 'collab' && (
                 <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3F5B4F]"></span>
               )}
             </button>
@@ -148,7 +165,7 @@ export const ReservationInquirySection: React.FC = () => {
                 <CheckCircle2 className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-heading font-medium text-[#1F2625]">
-                {formType === 'reservation' ? '다석 예약 신청이 접수되었습니다.' : 'VIP 기프트 상담 신청이 등록되었습니다.'}
+                {formType === 'reservation' ? '다석 예약 신청이 접수되었습니다.' : formType === 'vip_gifting' ? 'VIP 기프트 상담 신청이 등록되었습니다.' : '콜라보 제안이 성공적으로 접수되었습니다.'}
               </h3>
               <p className="text-xs text-[#6B7775] max-w-md mx-auto leading-relaxed font-light">
                 작성해 주신 연락처({contact})로 확정 알림 및 세부 안내 메시지를 발송해 드립니다.
@@ -251,7 +268,7 @@ export const ReservationInquirySection: React.FC = () => {
                     />
                   </div>
                 </>
-              ) : (
+              ) : formType === 'vip_gifting' ? (
                 /* Corporate / VIP Gifting Fields */
                 <>
                   <div>
@@ -283,6 +300,34 @@ export const ReservationInquirySection: React.FC = () => {
                     />
                   </div>
                 </>
+              ) : (
+                /* Collab Inquiry Fields */
+                <>
+                  <div>
+                    <label className="block text-[11px] font-mono-tag tracking-wider uppercase text-[#1F2625] mb-2 font-medium">
+                      COMPANY / BRAND NAME (소속 및 브랜드명)
+                    </label>
+                    <input
+                      type="text"
+                      value={companyName}
+                      onChange={e => setCompanyName(e.target.value)}
+                      placeholder="소속 단체나 브랜드명을 입력해주세요"
+                      className="w-full px-4 py-3 bg-[#F2F4F3]/60 border border-[#1F2625]/15 rounded-xl text-xs sm:text-sm text-[#1F2625] focus:outline-none focus:border-[#3F5B4F] transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-mono-tag tracking-wider uppercase text-[#1F2625] mb-2 font-medium">
+                      PROPOSAL DETAILS (콜라보 제안 내용)
+                    </label>
+                    <textarea
+                      value={preference}
+                      onChange={e => setPreference(e.target.value)}
+                      placeholder="브랜드 협업, 공간 대관, 팝업 스토어 등 제안하시고 싶은 내용을 자세히 적어주세요."
+                      rows={5}
+                      className="w-full p-3.5 bg-[#F2F4F3]/60 border border-[#1F2625]/15 rounded-xl text-xs sm:text-sm text-[#1F2625] focus:outline-none focus:border-[#3F5B4F] resize-none font-light"
+                    />
+                  </div>
+                </>
               )}
 
               {/* Submit Button matching Image 1 */}
@@ -295,7 +340,7 @@ export const ReservationInquirySection: React.FC = () => {
                   <span>처리 중...</span>
                 ) : (
                   <span>
-                    {formType === 'reservation' ? 'REQUEST RESERVATION' : 'SUBMIT GIFT INQUIRY'}
+                    {formType === 'reservation' ? 'REQUEST RESERVATION' : formType === 'vip_gifting' ? 'SUBMIT GIFT INQUIRY' : 'SEND PROPOSAL'}
                   </span>
                 )}
               </button>

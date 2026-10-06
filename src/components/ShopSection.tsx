@@ -5,66 +5,68 @@ import { ShoppingBag, FileText, Check, ShieldCheck, BookOpen, Package, Send } fr
 
 const FEATURED_SET: ShopItem = {
   id: 'gift-signature-3terroirs',
-  name: '오도행 시그니처 단일 다원 3종 기프트 세트',
+  name: '오도행 시그니처 싱글 오리진 3종 세트',
   subtitle: 'SINGULAR TERROIR HERITAGE COLLECTION',
   category: 'GIFT SETS',
   price: 98000,
-  badge: 'SIGNATURE GIFT EDITION #24/100',
-  image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=80',
-  description: '하동 옥로 우전, 무이암차 육계, 백호은침 춘채로 구성된 3종의 단일 다원 차와 린넨 보자기 포장, 인장 실링 카드가 함께 구성된 오도행의 대표 선물 에디션입니다.',
+  badge: 'SIGNATURE GIFT EDITION',
+  image: '/gift-set.jpg',
+  description: '다양한 발효도와 개성을 가진 싱글 오리진 잎차 3종(하동 야생 잭살차, 지리산 세작 녹차, 무이암차 육계)을 엄선하여, 취향에 따라 즐기기 좋은 밸런스 있는 구성을 제안합니다.',
   packagingOptions: [
-    { name: '기본 시그니처 박스 (오도행 지함 & 왁스 실링)', priceAdd: 0 },
-    { name: '친환경 린넨 보자기 (+₩5,000) (손바느질 마 혼방 & 매듭)', priceAdd: 5000 }
+    { name: '딥 포레스트 그린 지함 (무광 & 은은한 엠보싱)', priceAdd: 0 },
+    { name: '웜 그레이 패키지 (무광 & 동박 로고 포인트)', priceAdd: 0 },
+    { name: '크림 베이지 패키지 (무광 & 금박 로고 포인트)', priceAdd: 0 }
   ],
   inStock: true
 };
 
 const SHOP_CATALOG: ShopItem[] = [
   {
-    id: 'product-stoneware-teapot',
-    name: '스톤웨어 사유 티팟 & 찻잔 페어',
-    subtitle: 'TEAPOT & CUP SET',
-    category: 'TEACUPS & OBJECTS',
-    price: 52000,
-    badge: 'LIMITED STOCK',
-    image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=800&q=80',
-    description: '도예 공방 협업 한정 기물. 물대와 손잡이의 정교한 무게 중심, 화산재 유약 마감.',
-    inStock: true
-  },
-  {
-    id: 'product-celadon-cups',
-    name: '백자 분청 찻잔 2인 세트',
-    subtitle: 'HANDCRAFTED TEACUP',
-    category: 'TEACUPS & OBJECTS',
-    price: 52000,
-    badge: 'CRAFTED OBJECT',
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80',
-    description: '섬세한 철점 유약과 단아한 온기. 찻물의 색을 맑게 비추는 백자 안쪽 마감.',
-    inStock: true
-  },
-  {
-    id: 'product-matcha-edition',
-    name: '교토 우지 말차 & 차선 기프트 에디션',
-    subtitle: 'CEREMONIAL MATCHA SET',
-    category: 'GIFT SETS',
-    price: 78000,
-    badge: 'BESTSELLER',
-    image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
-    description: '첫물 찻잎만을 맷돌로 미세하게 갈아낸 단일 수령 말차 40g, 80본 대나무 차선, 차시.',
-    inStock: true
-  },
-  {
-    id: 'product-coldbrew-kit',
-    name: '시그니처 보태니컬 콜드브루 키트',
-    subtitle: 'COLD BREW KIT',
+    id: 'product-hadong-jacksal',
+    name: '하동 야생 잭살차',
+    subtitle: 'WILD BLACK TEA',
     category: 'SPECIAL',
-    price: 64000,
-    badge: 'SEASONAL',
+    price: 35000,
+    badge: '홍차 계열',
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80',
+    description: '자연 발효를 거쳐 깊고 묵직한 붉은 호박빛을 띠며, 은은한 단맛과 부드러운 목 넘김이 좋아 대중적이면서도 고급스러운 매력을 줍니다.',
+    inStock: true
+  },
+  {
+    id: 'product-jirisan-sejak',
+    name: '지리산 세작 녹차',
+    subtitle: 'GREEN TEA',
+    category: 'SPECIAL',
+    price: 32000,
+    badge: '녹차 계열',
+    image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=800&q=80',
+    description: '봄철 여린 잎을 덖어내어 맑고 청량한 연둣빛 수색과 싱그러운 풀 내음을 선사합니다. 차 세트의 기본이자 산뜻한 중심을 잡아줍니다.',
+    inStock: true
+  },
+  {
+    id: 'product-wuyi-rougui',
+    name: '무이암차 육계',
+    subtitle: 'WUYI ROCK TEA',
+    category: 'SPECIAL',
+    price: 45000,
+    badge: '우롱/암차 계열',
     image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
-    description: '각면 크리스털 글라스 & 18시간 저온 침출 전용 필터 보틀, 청량한 우롱 블렌드.',
+    description: '바위산의 미네랄 감과 훈연향, 강한 배전에서 오는 깊은 오렌지 브라운빛이 특징입니다. 차를 깊이 있게 즐기는 마니아층까지 만족시킬 수 있는 시그니처 포인트입니다.',
+    inStock: true
+  },
+  {
+    id: 'product-silver-needle',
+    name: '백호은침 (대체 구성)',
+    subtitle: 'SILVER NEEDLE WHITE TEA',
+    category: 'SPECIAL',
+    price: 42000,
+    badge: '백차 계열',
+    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80',
+    description: '맑고 투명한 백포도주빛의 백호은침. 선호에 따라 잭살차나 육계 대신 맑고 은은한 풍미로 대체 구성할 수 있습니다.',
     inStock: true
   }
 ];
+
 
 export const ShopSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'ALL' | 'GIFT SETS' | 'TEACUPS & OBJECTS' | 'SPECIAL'>('ALL');
